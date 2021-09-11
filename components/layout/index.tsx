@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import Head from 'next/head';
-import LineIcon from 'react-lineicons';
 
 export interface LayoutProps {}
 
