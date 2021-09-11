@@ -5,7 +5,7 @@ export interface LandingContentProps {}
 
 const LandingContent: FC<LandingContentProps> = () => {
   return (
-    <div className='block mx-12 mt-6'>
+    <div className='block mx-12 mt-6 md:mt-0'>
       <LandingContentSection />
       <LandingContentSection />
       <LandingContentSection />
