@@ -1,24 +1,11 @@
 import { PersonInterface, ImageInterface, Link, LandingContentInterface, LandingContentSectionInterface } from "./interfaces";
+import { createClient, Entry } from "contentful";
 
 //Filler data to mock contentful data
-const image: ImageInterface = {
-  src: "https://via.placeholder.com/1920x1080.png",
-  alt: "Headshot image for Brianna Isola",
-}
-
 const externalLink: Link = {
   link: "https://www.google.com/",
   linkLabel: "External Link",
 }
-
-const person: PersonInterface = {
-  image: image,
-  name: "Brianna Isola",
-  caption: "Caption",
-  email: "email[at]email.com",
-  header: "Header",
-  externalLink: externalLink
-};
 
 const landingContentSectionWithLink: LandingContentSectionInterface = {
   header: "Heading",
@@ -35,8 +22,15 @@ const landingContent: LandingContentInterface = {
   content: [landingContentSectionNoLink,landingContentSectionNoLink,landingContentSectionWithLink],
 }
 
+export const contentfulClient = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID || 'some-id',
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || 'some-token',
+});
+
 //Fetch contentful Person
-export const getPerson = (): PersonInterface => {
+export const getPersonById = async (id: string) => {
+  const contentfulPersonData: Entry<PersonInterface> = await contentfulClient.getEntry(id);
+  const person: PersonInterface = {...contentfulPersonData.fields}
   return person;
 };
 

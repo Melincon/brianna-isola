@@ -8,7 +8,7 @@ export interface ProfileCardProps {
 
 const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
   const {
-    image,
+    profileImage,
     name,
     caption,
     email,
@@ -18,7 +18,7 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
 
   return (
     <div className="text-center">
-      <img className="block mx-auto rounded-full w-48 h-48 mb-6" src={image.src} alt={image.alt} />
+      <img className="block mx-auto rounded-full w-48 h-48 mb-6" src={profileImage?.src} alt={profileImage?.alt} />
       <h1 className="block text-4xl">{name}</h1>
       <h2 className="block text-xl mb-3">{caption}</h2>
       <div className="border-b w-40 block mx-auto mb-9" />

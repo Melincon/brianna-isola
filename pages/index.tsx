@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
 import Landing from "../components/landing";
-import { getAllLandingContent, getPerson } from "../lib/contentful/api";
+import { getAllLandingContent, getPersonById } from "../lib/contentful/api";
 import { LandingContentInterface, PersonInterface } from "../lib/contentful/interfaces";
 import { GetStaticProps } from "next";
 
@@ -20,11 +20,9 @@ const Home: NextPage<HomePageProps> = ({ person, landingContent }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = (): {
-  props: HomePageProps;
-} => {
-  const person = getPerson();
-  const landingContent = getAllLandingContent();
+export const getStaticProps: GetStaticProps = async () => {
+  const person: PersonInterface = await getPersonById("2xEm2RUoetRsuwU3faaWrD");
+  const landingContent: LandingContentInterface = getAllLandingContent();
   return {
     props: {
       person: person,

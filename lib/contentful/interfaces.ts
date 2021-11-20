@@ -1,6 +1,6 @@
 //Interfaces for contentful models
 export interface PersonInterface {
-  image: ImageInterface;
+  profileImage: ImageInterface;
   name: string;
   caption: string;
   email: string;
