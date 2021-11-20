@@ -1,14 +1,20 @@
 import { FC } from "react";
-import LandingContentSection from "../landing-content-section";
+import { LandingContentInterface, LandingContentSection } from "../../lib/contentful/interfaces";
 
-export interface LandingContentProps {}
 
-const LandingContent: FC<LandingContentProps> = () => {
+export interface LandingContentProps {
+  landingContent: LandingContentInterface;
+}
+
+const LandingContent: FC<LandingContentProps> = ({ landingContent }) => {
+  const { content } = landingContent;
   return (
     <div className="block mx-12 mt-6 md:mt-0">
-      <LandingContentSection />
-      <LandingContentSection />
-      <LandingContentSection />
+      {content.map((contentSection: LandingContentSection) => {
+        return (
+          <div className="">{contentSection.header}</div>
+        )
+      })}
     </div>
   );
 };

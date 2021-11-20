@@ -19,7 +19,7 @@ export interface ImageInterface {
   alt: string;
 }
 
-export interface LandingContent {
+export interface LandingContentInterface {
   content: LandingContentSection[];
 }
 

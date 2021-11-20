@@ -1,5 +1,4 @@
-import { PersonInterface, ImageInterface, Link, LandingContent, LandingContentSection } from "./interfaces";
-
+import { PersonInterface, ImageInterface, Link, LandingContentInterface, LandingContentSection } from "./interfaces";
 
 //Filler data to mock contentful data
 const image: ImageInterface = {
@@ -21,14 +20,19 @@ const person: PersonInterface = {
   externalLink: externalLink
 };
 
-const landingContentSection: LandingContentSection = {
+const landingContentSectionWithLink: LandingContentSection = {
   header: "Heading",
   paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   headerLink: externalLink,
 }
 
-const landingContent: LandingContent = {
-  content: [landingContentSection,landingContentSection,landingContentSection],
+const landingContentSectionNoLink: LandingContentSection = {
+  header: "Heading",
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+}
+
+const landingContent: LandingContentInterface = {
+  content: [landingContentSectionNoLink,landingContentSectionNoLink,landingContentSectionWithLink],
 }
 
 //Fetch contentful Person
@@ -36,8 +40,7 @@ export const getPerson = (): PersonInterface => {
   return person;
 };
 
-
 //Fetch all Contentful Landing Content
-export const getAllLandingContent = (): LandingContent => {
-  return landingContent
+export const getAllLandingContent = (): LandingContentInterface => {
+  return landingContent;
 }

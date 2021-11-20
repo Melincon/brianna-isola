@@ -1,30 +1,34 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
 import Landing from "../components/landing";
-import { getPerson } from "../lib/contentful/api";
-import { PersonInterface } from "../lib/contentful/interfaces";
+import { getAllLandingContent, getPerson } from "../lib/contentful/api";
+import { LandingContentInterface, PersonInterface } from "../lib/contentful/interfaces";
 import { GetStaticProps } from "next";
 
 export interface HomePageProps {
   person: PersonInterface;
+  landingContent: LandingContentInterface;
 }
 
-const Home: NextPage<HomePageProps> = ({ person }) => {
+const Home: NextPage<HomePageProps> = ({ person, landingContent }) => {
   return (
     <main className="">
       <Layout>
-        <Landing person={person} />
+        <Landing person={person} landingContent={landingContent} />
       </Layout>
     </main>
   );
 };
 
-export const getStaticProps: GetStaticProps = () => {
-  const personJSON = getPerson();
-
+export const getStaticProps: GetStaticProps = (): {
+  props: HomePageProps;
+} => {
+  const person = getPerson();
+  const landingContent = getAllLandingContent();
   return {
     props: {
-      person: personJSON,
+      person: person,
+      landingContent: landingContent,
     },
   };
 };
