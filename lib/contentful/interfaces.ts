@@ -1,5 +1,5 @@
 export interface PersonInterface {
-  image: string;
+  image: ImageInterface;
   name: string;
   caption: string;
   email: string;
@@ -12,4 +12,9 @@ export interface PersonInterface {
 export interface SocialLinkInterface {
   icon: string;
   link: string;
+}
+
+export interface ImageInterface {
+  src: string;
+  alt: string;
 }

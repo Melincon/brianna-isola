@@ -1,7 +1,12 @@
-import { PersonInterface } from "./interfaces";
+import { PersonInterface, ImageInterface } from "./interfaces";
 
-const personVariable: PersonInterface = {
-  image: "https://via.placeholder.com/1920x1080.png",
+const image: ImageInterface = {
+  src: "https://via.placeholder.com/1920x1080.png",
+  alt: "Headshot image for Brianna Isola",
+}
+
+const person: PersonInterface = {
+  image: image,
   name: "Brianna Isola",
   caption: "Caption",
   email: "email[at]email.com",
@@ -11,5 +16,5 @@ const personVariable: PersonInterface = {
 };
 
 export const getPerson = (): PersonInterface => {
-  return personVariable;
+  return person;
 };
