@@ -6,7 +6,7 @@ export interface SocialNavProps {}
 
 const SocialNav: FC<SocialNavProps> = () => {
   return (
-    <div className='inline-block'>
+    <div className='SocialNav'>
       <div className='flex'>
         <div className='mr-12'>
           <VscGithubInverted size={36} />
@@ -15,6 +15,11 @@ const SocialNav: FC<SocialNavProps> = () => {
           <FaLinkedin size={36} />
         </div>
       </div>
+      <style jsx>{`
+        .SocialNav {
+          display: inline-block;
+        }
+      `}</style>
     </div>
   );
 };
