@@ -26,6 +26,8 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
       <span className="block mb-3">{email}</span>
       <SocialNav />
       <div className=" border-b w-72 block mx-auto mt-3" />
+      <span className="block text-xl mt-3">{header}</span>
+      <a className="block text-xl mb-3" href={externalLink} target="_blank" rel="noreferrer" >{externalLinkLabel}</a>
     </div>
   );
 };
