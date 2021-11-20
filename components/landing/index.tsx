@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import ProfileCard from '../profile-card';
 import LandingContent from '../landing-content';
-import { PersonInterface } from '../../lib/typescript/interfaces';
+import { PersonInterface } from '../../lib/contentful/interfaces';
 
 export interface LandingProps {
   person: PersonInterface;

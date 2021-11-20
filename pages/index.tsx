@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import Layout from '../components/layout';
 import Landing from '../components/landing';
-import { getPerson } from '../lib/typescript/api';
-import { PersonInterface } from '../lib/typescript/interfaces';
+import { getPerson } from '../lib/contentful/api';
+import { PersonInterface } from '../lib/contentful/interfaces';
 
 export interface HomePageProps {
   person: PersonInterface;

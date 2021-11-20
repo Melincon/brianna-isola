@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import SocialNav from '../social-nav';
-import { PersonInterface } from '../../lib/typescript/interfaces';
+import { PersonInterface } from '../../lib/contentful/interfaces';
 
 export interface ProfileCardProps {
   person: PersonInterface;
