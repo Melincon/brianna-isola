@@ -13,7 +13,6 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
     caption,
     email,
     header,
-    externalLinkLabel,
     externalLink,
   } = person;
 
@@ -27,7 +26,7 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
       <SocialNav />
       <div className=" border-b w-72 block mx-auto mt-3" />
       <span className="block text-xl mt-3">{header}</span>
-      <a className="block text-xl mb-3" href={externalLink} target="_blank" rel="noreferrer" >{externalLinkLabel}</a>
+      <a className="block text-xl mb-3" href={externalLink.link} target="_blank" rel="noreferrer" >{externalLink.linkLabel}</a>
     </div>
   );
 };
