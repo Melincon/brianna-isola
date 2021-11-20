@@ -31,7 +31,6 @@ const landingContent: LandingContent = {
   content: [landingContentSection,landingContentSection,landingContentSection],
 }
 
-
 //Fetch contentful Person
 export const getPerson = (): PersonInterface => {
   return person;
