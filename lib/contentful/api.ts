@@ -1,4 +1,4 @@
-import { PersonInterface, ImageInterface, Link, LandingContentInterface, LandingContentSection } from "./interfaces";
+import { PersonInterface, ImageInterface, Link, LandingContentInterface, LandingContentSectionInterface } from "./interfaces";
 
 //Filler data to mock contentful data
 const image: ImageInterface = {
@@ -20,13 +20,13 @@ const person: PersonInterface = {
   externalLink: externalLink
 };
 
-const landingContentSectionWithLink: LandingContentSection = {
+const landingContentSectionWithLink: LandingContentSectionInterface = {
   header: "Heading",
   paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   headerLink: externalLink,
 }
 
-const landingContentSectionNoLink: LandingContentSection = {
+const landingContentSectionNoLink: LandingContentSectionInterface= {
   header: "Heading",
   paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 }
