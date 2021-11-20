@@ -20,10 +20,10 @@ export interface ImageInterface {
 }
 
 export interface LandingContentInterface {
-  content: LandingContentSection[];
+  content: LandingContentSectionInterface[];
 }
 
-export interface LandingContentSection {
+export interface LandingContentSectionInterface {
   header: string;
   paragraph: string;
   headerLink?: Link;

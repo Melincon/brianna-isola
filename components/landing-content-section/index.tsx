@@ -1,17 +1,19 @@
 import { FC } from "react";
+import { LandingContentSectionInterface } from "../../lib/contentful/interfaces";
 
-export interface LandingContentSectionProps {}
+export interface LandingContentSectionProps {
+  contentSection: LandingContentSectionInterface;
+}
 
-const LandingContentSection: FC<LandingContentSectionProps> = () => {
+const LandingContentSection: FC<LandingContentSectionProps> = ({contentSection}) => {
+  const { header, paragraph, headerLink } = contentSection;
+  
   return (
     <div className=" mb-6">
-      <h3 className=" text-3xl">Heading</h3>
+      <h3 className=" text-3xl">{header}</h3>
       <div className="border-b mb-3"></div>
       <p className="">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.{" "}
+        {paragraph}
       </p>
     </div>
   );
