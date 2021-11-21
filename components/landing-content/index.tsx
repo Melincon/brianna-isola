@@ -12,9 +12,9 @@ const LandingContent: FC<LandingContentProps> = ({ landingContent }) => {
   
   return (
     <div className="block mx-12 mt-6 md:mt-0">
-      {content.map((contentSection: LandingContentSectionInterface) => {
+      {content.map((contentSection: LandingContentSectionInterface, index: number) => {
         return (
-          <LandingContentSection contentSection={contentSection} />
+          <LandingContentSection contentSection={contentSection} key={index} />
         )
       })}
     </div>
