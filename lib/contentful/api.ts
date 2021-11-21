@@ -1,4 +1,4 @@
-import { PersonInterface, ImageInterface, Link, LandingContentInterface, LandingContentSectionInterface } from "./interfaces";
+import { PersonInterface, Link, LandingContentInterface, LandingContentSectionInterface } from "./interfaces";
 import { createClient, Entry } from "contentful";
 
 //Filler data to mock contentful data

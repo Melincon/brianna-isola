@@ -1,22 +1,14 @@
+import { Asset, Entry } from "contentful";
+
 //Interfaces for contentful models
 export interface PersonInterface {
-  profileImage: ImageInterface;
+  profileImage: Asset;
   name: string;
   caption: string;
   email: string;
   header: string;
-  externalLink: Link;
-  socialLinks?: SocialLinkInterface[];
-}
-
-export interface SocialLinkInterface {
-  icon: string;
-  link: string;
-}
-
-export interface ImageInterface {
-  src: string;
-  alt: string;
+  externalLink: Entry<Link>;
+  socialLinks?: Entry<Link>[];
 }
 
 export interface LandingContentInterface {
