@@ -22,7 +22,7 @@ const Home: NextPage<HomePageProps> = ({ person, landingContent }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const person: PersonInterface = await getPersonById("2xEm2RUoetRsuwU3faaWrD");
-  const landingContent: LandingContentInterface = getAllLandingContent();
+  const landingContent: LandingContentInterface = await getAllLandingContent();
   return {
     props: {
       person: person,
