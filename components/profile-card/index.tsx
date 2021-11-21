@@ -17,7 +17,7 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
   } = person;
 
   return (
-    <div className="text-center">
+    <div className="text-center sticky top-24">
       <img className="block mx-auto w-5/6 h-auto rounded-full mb-6" src={profileImage.fields.file.url} alt={profileImage.fields.description} />
       <h1 className="block text-4xl">{name}</h1>
       <h2 className="block text-xl mb-3">{caption}</h2>
