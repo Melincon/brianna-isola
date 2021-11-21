@@ -10,7 +10,7 @@ export interface LandingProps {
 
 const Landing: FC<LandingProps> = ({ person, landingContent }) => {
   return (
-    <div className="md:flex m-auto">
+    <div className="lg:flex m-auto">
       <div className="block">
         <ProfileCard person={person} />
       </div>
