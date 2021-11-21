@@ -1,4 +1,4 @@
-import { Asset, Entry, RichTextContent } from "contentful";
+import { Asset, Entry } from "contentful";
 
 //Interfaces for contentful models
 export interface PersonInterface {
@@ -17,7 +17,7 @@ export interface LandingContentInterface {
 
 export interface LandingContentSectionInterface {
   header: string;
-  markdown: RichTextContent;
+  paragraph: string;
   headerLink?: Entry<Link>;
 }
 

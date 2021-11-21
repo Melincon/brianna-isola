@@ -7,13 +7,12 @@ export interface LandingContentSectionProps {
 
 const LandingContentSection: FC<LandingContentSectionProps> = ({contentSection}) => {
   const { header, paragraph, headerLink } = contentSection;
-  
   return (
     <div className=" mb-6">
       <h3 className=" text-3xl">{header}</h3>
       <div className="border-b mb-3"></div>
       {headerLink && (
-        <a className="" href={headerLink.link} target="_blank" rel="noreferrer">{headerLink.linkLabel}</a>
+        <a className="" href={headerLink.fields.link} target="_blank" rel="noreferrer">{headerLink.fields.linkLabel}</a>
       )}
       <p className="mt-2">
         {paragraph}
