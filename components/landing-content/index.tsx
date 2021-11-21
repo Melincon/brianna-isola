@@ -2,6 +2,7 @@ import { FC } from "react";
 import { LandingContentInterface, LandingContentSectionInterface } from "../../lib/contentful/interfaces";
 import LandingContentSection from "../landing-content-section";
 
+
 export interface LandingContentProps {
   landingContent: LandingContentInterface;
 }
