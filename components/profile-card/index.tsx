@@ -1,7 +1,6 @@
 import { FC } from "react";
 import SocialNav from "../social-nav";
 import { PersonInterface } from "../../lib/contentful/interfaces";
-import Image from 'next/image'
 
 export interface ProfileCardProps {
   person: PersonInterface;
@@ -16,7 +15,7 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
     header,
     externalLink,
   } = person;
-  
+
   return (
     <div className="text-center">
       <img className="block mx-auto w-5/6 h-auto rounded-full mb-6" src={profileImage.fields.file.url} alt={profileImage.fields.description} />
