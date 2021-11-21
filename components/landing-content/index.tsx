@@ -8,6 +8,7 @@ export interface LandingContentProps {
 
 const LandingContent: FC<LandingContentProps> = ({ landingContent }) => {
   const { content } = landingContent;
+  
   return (
     <div className="block mx-12 mt-6 md:mt-0">
       {content.map((contentSection: LandingContentSectionInterface) => {
