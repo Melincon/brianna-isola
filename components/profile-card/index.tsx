@@ -19,7 +19,9 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
 
   return (
     <div className="text-center sticky top-24">
-      <Image className="block mx-auto w-3/4 md:w-1/2 lg:w-full h-auto rounded-full mb-6" src={"https:" + profileImage.fields.file.url} alt={profileImage.fields.description} layout="fill" />
+      <div className="block mx-auto relative w-80 h-80 mb-6">
+        <Image className="block mx-auto rounded-full w-full h-full" src={"https:" + profileImage.fields.file.url} alt={profileImage.fields.description} layout="fill" />
+      </div>
       <h1 className="block text-4xl">{name}</h1>
       <h2 className="block text-xl mb-3">{caption}</h2>
       <div className="border-b w-40 block mx-auto mb-9" />
