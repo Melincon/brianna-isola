@@ -24,12 +24,12 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
       </div>
       <h1 className="block text-4xl text-colorFour">{name}</h1>
       <h2 className="block text-xl mb-3 text-colorTwo">{caption}</h2>
-      <div className="border-b w-40 block mx-auto mb-9" />
+      <div className="border-b w-40 block mx-auto mb-9 border-lineColor" />
       <span className="block mb-3 text-colorTwo">{email}</span>
       <SocialNav />
-      <div className=" border-b w-72 block mx-auto mt-3" />
+      <div className=" border-b w-72 block mx-auto mt-3 border-lineColor" />
       <span className="block text-xl mt-3 text-colorTwo">{header}</span>
-      <a className="block text-xl mb-3" href={externalLink.fields.link} target="_blank" rel="noreferrer" >{externalLink.fields.linkLabel}</a>
+      <a className="block text-xl mb-3 text-colorFive" href={externalLink.fields.link} target="_blank" rel="noreferrer" >{externalLink.fields.linkLabel}</a>
     </div>
   );
 };
