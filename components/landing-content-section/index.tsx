@@ -14,7 +14,7 @@ const LandingContentSection: FC<LandingContentSectionProps> = ({contentSection})
       {headerLink && (
         <a className="" href={headerLink.fields.link} target="_blank" rel="noreferrer">{headerLink.fields.linkLabel}</a>
       )}
-      <p className="mt-2 text-colorThree">
+      <p className="mt-2 text-colorThree font-three font-extralight">
         {paragraph}
       </p>
     </div>

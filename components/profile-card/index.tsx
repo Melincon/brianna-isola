@@ -23,9 +23,9 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
         <Image className="block mx-auto rounded-full w-full h-full" src={"https:" + profileImage.fields.file.url} alt={profileImage.fields.description} layout="fill" width={profileImage.fields.file.details.image?.width} height={profileImage.fields.file.details.image?.height} />
       </div>
       <h1 className="block text-4xl text-colorFour">{name}</h1>
-      <h2 className="block text-xl mb-3 text-colorTwo">{caption}</h2>
+      <h2 className="block text-xl mb-3 text-colorTwo font-three italic font-extralight">{caption}</h2>
       <div className="border-b w-40 block mx-auto mb-9 border-lineColor" />
-      <span className="block mb-3 text-colorTwo">{email}</span>
+      <span className="block mb-3 text-colorTwo font-three font-extralight">{email}</span>
       <SocialNav />
       <div className=" border-b w-72 block mx-auto mt-3 border-lineColor" />
       <span className="block text-xl mt-3 text-colorTwo">{header}</span>

@@ -3,12 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        'lineColor': '#212222',
-      },
       borderColor: {
         'lineColor': '#212222',
       },
+      fontFamily: {
+        three: ['Source Sans Pro']
+      }
     },
     textColor: {
       'colorOne': '#DDDDDD',
