@@ -22,13 +22,13 @@ const ProfileCard: FC<ProfileCardProps> = ({ person }) => {
       <div className="block mx-auto relative w-80 h-80 mb-6">
         <Image className="block mx-auto rounded-full w-full h-full" src={"https:" + profileImage.fields.file.url} alt={profileImage.fields.description} layout="fill" width={profileImage.fields.file.details.image?.width} height={profileImage.fields.file.details.image?.height} />
       </div>
-      <h1 className="block text-4xl">{name}</h1>
-      <h2 className="block text-xl mb-3">{caption}</h2>
+      <h1 className="block text-4xl text-colorFour">{name}</h1>
+      <h2 className="block text-xl mb-3 text-colorTwo">{caption}</h2>
       <div className="border-b w-40 block mx-auto mb-9" />
-      <span className="block mb-3">{email}</span>
+      <span className="block mb-3 text-colorTwo">{email}</span>
       <SocialNav />
       <div className=" border-b w-72 block mx-auto mt-3" />
-      <span className="block text-xl mt-3">{header}</span>
+      <span className="block text-xl mt-3 text-colorTwo">{header}</span>
       <a className="block text-xl mb-3" href={externalLink.fields.link} target="_blank" rel="noreferrer" >{externalLink.fields.linkLabel}</a>
     </div>
   );
