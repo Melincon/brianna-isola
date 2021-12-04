@@ -11,6 +11,7 @@ export interface HomePageProps {
 }
 
 const Home: NextPage<HomePageProps> = ({ person, landingContent }) => {
+  
   return (
     <main className="">
       <Layout>
